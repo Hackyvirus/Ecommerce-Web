@@ -1,0 +1,18 @@
+<div class="search-results">
+  <h1>Search Results for "{{ search.terms }}"</h1>
+  {% if search.results_count > 0 %}
+    <div class="product-list">
+      {% for product in search.results %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img width="" height="" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+            <p>{{ product.title }}</p>
+            <span>{{ product.price | money }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No results found for "{{ search.terms }}".</p>
+  {% endif %}
+</div>

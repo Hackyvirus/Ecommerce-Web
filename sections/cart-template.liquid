@@ -1,0 +1,24 @@
+<div class="cart">
+  <h1>Your Cart</h1>
+  {% if cart.item_count > 0 %}
+    <form action="/cart" method="post" novalidate>
+      <div class="cart-items">
+        {% for item in cart.items %}
+          <div class="cart-item">
+            <p>{{ item.product.title }}</p>
+            <span>Price: {{ item.line_price | money }}</span>
+            <input type="number" name="updates[{{ item.key }}]" value="{{ item.quantity }}" min="1">
+            <button type="submit" name="updates[{{ item.key }}]" value="0">Remove</button>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="cart-total">
+        <p>Total: {{ cart.total_price | money }}</p>
+      </div>
+      <button type="submit" name="update" value="Update Cart">Update Cart</button>
+    </form>
+    <a href="/checkout" class="checkout-button">Proceed to Checkout</a>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+</div>

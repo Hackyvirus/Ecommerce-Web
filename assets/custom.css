@@ -1,0 +1,103 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+header .search-bar {
+  margin-top: 10px;
+}
+
+header .search-bar input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+header .search-bar button {
+  padding: 5px 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.featured-collections, .featured-products {
+  padding: 20px;
+}
+
+.cart {
+  padding: 20px;
+}
+
+.cart-item {
+  margin-bottom: 10px;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.checkout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.product-list, .cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card p {
+  margin: 10px 0;
+}
+
+.search-results {
+  padding: 20px;
+}
+
+.search-results h1 {
+  margin-bottom: 20px;
+}
+
+.search-results p {
+  margin: 10px 0;
+}

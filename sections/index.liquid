@@ -1,0 +1,45 @@
+<section>
+  <div class="hero">
+    <h1>Welcome to Our Store</h1>
+    <p>Discover the best products available online</p>
+  </div>
+
+  <div class="featured-collections">
+    <h2>Featured Collections</h2>
+    <div class="collection-list">
+      {% for collection in collections %}
+        <div class="collection-card">
+          <a href="{{ collection.url }}">
+            <h3>{{ collection.title }}</h3>
+            <div class="collection-products">
+              {% for product in collection.products %}
+                <div class="product-card">
+                  <a href="{{ product.url }}">
+                    <img width=""  height="" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+                    <p>{{ product.title }}</p>
+                    <span>{{ product.price | money }}</span>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-list">
+      {% for product in collections['frontpage'].products %}
+        <div class="product-card">
+          <a href="{{ product.url }}">
+            <img width="" height="" src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+            <p>{{ product.title }}</p>
+            <span>{{ product.price | money }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
