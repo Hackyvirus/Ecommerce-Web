@@ -7,3 +7,18 @@
 
 /* font-family: "Montserrat", sans-serif;
 font-family: "Lora", sans-serif; */
+
+.main-pae-first-tittle{
+  width: 80dvw;
+  margin: auto;
+  margin-top: 40px;
+  font-family: "Lora", sans-serif; 
+  font-weight:normal;
+  font-size: 35px;
+}
+.first-slide{
+  width: 90dvw;
+  margin: auto;
+  border: 1px solid grey;
+  height: 450px;
+}

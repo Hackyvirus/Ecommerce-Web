@@ -15,7 +15,7 @@
 </head>
 <body>
   {% section 'header' %}
-  {%  section 'slider' %} 
+  {% comment %} {%  section 'slider' %}  {% endcomment %}
   {{ content_for_layout }} 
   {% section 'footer' %}
   <script  defer src="{{ 'custom.js' | asset_url }}"></script>
