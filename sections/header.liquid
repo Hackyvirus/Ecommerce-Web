@@ -1,3 +1,4 @@
+{% comment %}
 <header>
   <h1>{{ 'header.welcome' | t }}</h1>
   <nav>
@@ -9,7 +10,50 @@
     </ul>
   </nav>
   <form action="/search" method="get" class="search-bar">
-    <input type="text" name="q" placeholder="Search products..." required>
+    <input type="text" name="q" placeholder="Search products..." required />
     <button type="submit">Search</button>
   </form>
+</header>
+{% endcomment %}
+
+{{'header.css' |  asset_url |  stylesheet_tag}}
+
+<header>
+  <nav>
+    <div class="left-nav">
+      <form class="search-box" action="/search" method="get">
+        <input  class="q" type="text" name="q" placeholder="Seach Here...." required />
+        <button class="search" type="submit">Search</button>
+      </form>
+      <span>
+        <select name="money" id="money">
+          <option value="">Choose Currency</option>
+          <option><span>INR</span></option>
+          <option><span>INR</span></option>
+          <option><span>INR</span></option>
+          <option><span>INR</span></option>
+        </select>
+      </span>
+    </div>
+
+    <img src="{{'logo.png' |  asset_url}}" width="150" height="auto" alt="logo">
+
+    <div class="address"> 
+      <a href="#store-location">Store Location</a>
+      <a href="/profile"> <img src="{{'profile.png' |  asset_url}}"  width="50px" height="50px" alt="profile"></a>
+     <a href="/cart"> <img src="{{'cart.png' |  asset_url}}"  width="50px" height="50px" alt="cart"></a>
+    </div>
+  </nav>
+  <hr class="nav-hr">
+
+  <div class="nav-collection-links">
+<a href="/pages/skin-care">Skin Care <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/hair-care">Hair Care <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/make-up">Make Up <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/body-care">Body Care<img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/supplements">Supplements <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/duscover">Discover Us <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/combos">Combos <img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+<a href="/pages/gift">Gifting<img src="{{'down.png' |  asset_url}}" alt="" width="15px" height="auto"></a>
+  </div>
 </header>
