@@ -16,19 +16,19 @@
 </header>
 {% endcomment %}
 
-{{'header.css' |  asset_url |  stylesheet_tag}}
+{% comment %} {{'header.css' |  asset_url |  stylesheet_tag}} {% endcomment %}
 
 <header>
   <nav>
     <div class="left-nav">
       <form class="search-box" action="/search" method="get">
+      <button class="search" type="submit"><img class="search-img" src="{{'search.png' |  asset_url}}" alt="searc" width="25px" height="auto"></button>
         <input  class="q" type="text" name="q" placeholder="Seach Here...." required />
-        <button class="search" type="submit">Search</button>
       </form>
-      <span>
+      <span class="currency">
         <select name="money" id="money">
-          <option value="">Choose Currency</option>
-          <option><span>INR</span></option>
+          <option value="INR"> &#8377 INR </option>
+          <option><span>INR</span></option> 
           <option><span>INR</span></option>
           <option><span>INR</span></option>
           <option><span>INR</span></option>
@@ -36,7 +36,7 @@
       </span>
     </div>
 
-    <img src="{{'logo.png' |  asset_url}}" width="150" height="auto" alt="logo">
+    <img id="logo" src="{{'logo.png' |  asset_url}}" width="150" height="auto" alt="logo">
 
     <div class="address"> 
       <a href="#store-location">Store Location</a>

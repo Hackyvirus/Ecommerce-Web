@@ -6,13 +6,13 @@ body {
 
 /* header  */
 header {
-  background: radial-gradient(#748c3c, #5f7728, #4b5e1e);
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 271px;
+	background: radial-gradient(#748c3c,#5f7728,#4b5e1e);
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 225px;
 }
 
 /* navbar  */
@@ -22,7 +22,7 @@ nav {
   align-items: end;
   justify-content: space-between;
   flex-direction: row;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16;
 }
 .left-nav {
@@ -37,6 +37,29 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #fff;
+  height: 32px;
+  border: 1px solid;
+}
+
+.currency {
+  width: 80px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 3px;
+  text-align: center;
+}
+#money {
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  text-align: center;
+  font-family: Lora;
+  font-weight: normal;
+  color: #fff;
+  pointer-events:none;
+  font-size: 16px;
 }
 
 .q {
@@ -45,16 +68,34 @@ nav {
   border-color: transparent;
   font-family: "Lora";
 }
-.q:active {
+.search {
+  height: 30px;
+  background-color: transparent;
+  border: 0;
+  font-family: Lora;
+}
+.q:focus {
+  border: 0;
   outline: 0;
+  padding: 6px;
+  padding-left: 4px;
+}
+
+.search-img {
+  width: 21px;
+  margin: 4px 7px;
 }
 
 .address {
-  width: 240px;
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  align-items: end;
+	width: 240px;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	align-items: center;
+}
+
+#logo{
+  margin: 0 100px;
 }
 
 header a {
