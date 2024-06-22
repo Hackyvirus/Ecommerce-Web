@@ -1,7 +1,30 @@
-<div class="product-card">
+{% comment %} <div class="product-card">
     <a href="{{ product.url }}">
         <img width="" height="" src="{{ product.featured_image | image_url: 'small' }}" alt="{{ product.title }}">
         <p>{{ product.title }}</p>
         <span>{{ product.price | money }}</span>
     </a>
+</div>  {% endcomment %}
+
+
+ 
+<div class="product-card">
+    <a href="{{ product.url }}">
+            <img src="{{ product.featured_image | image_url : 'small' }}" width="" height="" alt="{{ product.title }}">
+        <p>{{ product.title }}</p>
+        <p>50 gms</p>
+        <span>{{ product.price |  money }}</span>
+        <p>MRP inclusive of all taxes</p>    
+    </a>
+   {% form 'product', product %}
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}" >
+<button type="submit">Add to Cart</button>
+    {% endform %}
+    {{ product.variants.first.id }}
 </div>
+
+{% comment %} 
+{% form 'product', product %}
+    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+    <button type="submit">Add to Cart</button>
+  {% endform %} {% endcomment %}
